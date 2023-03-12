@@ -1,0 +1,156 @@
+.footer {
+    background-color: $primary;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 64px;
+    @media (max-width: $tablet) {
+        height: auto;
+        padding-top: 64px;
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: center;
+        padding: 16px 0;
+
+        .item {
+            font-family: $fontFamily-1;
+            font-style: normal;
+            font-weight: $weight-2;
+            font-size: 13.5px;
+            line-height: 150%;
+            text-align: center;
+            color: $white;
+        }
+    }
+
+    .footer__container {
+        margin: auto;
+        width: $max-width-7;
+        display: flex;
+        border-bottom: solid 1px rgba(56, 132, 252, .25);
+        margin-bottom: 0;
+        padding-bottom: 32px;
+        text-align: center;
+
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr;
+        }
+        
+        .footer__col-left {
+            margin: auto;
+            
+            @media (max-width: $tablet) {
+                text-align: center;
+            }
+
+            .description {
+                font-family: $fontFamily-1;
+                font-style: normal;
+                font-weight: $weight-2;
+                font-size: 13.5px;
+                line-height: 150%;
+                color: $white;
+                max-width: 550px;
+                margin: auto;
+                padding: 24px 0;
+                line-height: 1.8;
+            }
+
+            .social-media {
+                display: flex;
+                column-gap: 8px;
+                justify-content: center;
+
+                @media (max-width: $tablet) {
+                    justify-content: center;
+                    padding-bottom: 74px;
+                }
+                
+                .email {
+                    transition: all .3s linear;
+                    border-radius: 5px;
+                    &:hover {
+                        background: $secondary;
+                        transition: all .3s linear;
+                    }
+                    .link {
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 35px;
+                            height: 35px;
+                            background-image: $icon-email;
+                        }
+                    }
+                }
+
+                .linkedin {
+                    transition: all .3s linear;
+                    border-radius: 5px;
+                    &:hover {
+                        background: $secondary;
+                        transition: all .3s linear;
+                    }
+                    .link {
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 35px;
+                            height: 35px;
+                            background-image: $icon-linkedin;
+                        }
+                    }
+                }
+
+                .whatsapp {
+                    transition: all .3s linear;
+                    border-radius: 5px;
+                    &:hover {
+                        background: $secondary;
+                        transition: all .3s linear;
+                    }
+                    .link {
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 35px;
+                            height: 35px;
+                            background-image: $icon-whatsapp;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer__col-right {
+            @media (max-width: $tablet) {
+                text-align: center;
+            }
+            .description {
+                font-family: $fontFamily-1;
+                font-style: normal;
+                font-weight: $weight-2;
+                font-size: 13.5px;
+                line-height: 150%;
+                color: $white;
+                @media (max-width: $tablet){
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .whatsapp__fixed {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        background: #25D366;
+        border-radius: 5px;
+        text-align: center;
+    }
+}

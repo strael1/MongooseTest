@@ -1,0 +1,38 @@
+.accordion-container {
+    .js-enabled {
+        border: none!important;
+        margin-bottom: 35px!important;
+    }
+
+    .ac-trigger {
+        color: $primary!important;
+        background: $white !important;
+        font-family: $fontFamily-1 !important;
+        font-weight: $weight-4 !important;
+    }
+
+    .is-active {
+        padding: 24px 18px;
+        border-radius: 5px;
+        background: $secondary;
+
+        .ac-header {
+            color: $white!important;
+
+            .ac-trigger {
+                color: $white!important;
+                padding-bottom: 4px!important;
+                background: $secondary !important;
+            }
+        }
+
+        .ac-panel {
+            color: $white!important;
+
+            .ac-text {
+                color: $white!important;
+                font-family: $fontFamily-1 !important;
+            }
+        }
+    }
+}

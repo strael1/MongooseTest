@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms</title>
-</head>
+<%- include('includes/header.ejs'); %>
 <body>
-    <form method="POST">
-        <input type="text" name="nome" placeholder="Nome Completo"/>
-        <input type="email" name="email" placeholder="exemplo@gmail.com"/>
-        <input type="tel" name="telefone" placeholder="(11)223344556"/>
-        <input type="password" name="senha" placeholder="********"/>
-        <button type="submit">Enviar</button>
-    </form>
-</body>
-</html>
+    <section>
+        <div class="contact">
+            <form method="POST" class="form">
+                <input class="form-control" type="text" name="nome" placeholder="Nome Completo"/>
+                <input class="form-control" type="email" name="email" placeholder="exemplo@gmail.com"/>
+                <input class="form-control" type="tel" name="telefone" placeholder="(11)223344556"/>
+                <input class="form-control" type="password" name="senha" placeholder="********"/>
+                <button class="btn-send" type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+<%- include('includes/footer.ejs'); %>

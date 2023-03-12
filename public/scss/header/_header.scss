@@ -1,0 +1,108 @@
+.header {
+    background: $white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    
+    @media (max-width: $tablet) {
+        padding: 15px 0;
+    }
+
+    .mobile-mode {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+
+        .header__logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header__contact {
+            a {
+                text-decoration: none;
+                font-family: $fontFamily-1;
+                font-style: normal;
+                font-weight: $weight-4;
+                font-size: $size-6;
+                line-height: 150%;
+                color: $white;
+                background: $red;
+                border: 1px solid $red;
+                border-radius: 10px;
+                padding: $padding-1 $padding-2;
+            }
+        }
+    }
+
+    .desktop-mode {
+        margin: auto;
+        width: $max-width-8;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: $tablet) {
+            display: none;
+        }
+
+        .header__logo {
+            display: flex;
+        }
+
+        .header__menu {
+            nav {
+                ul {
+                    list-style: none;
+                    padding-left: 0;
+                    display: flex;
+                    margin: 0;
+                    li {
+                        padding: 0 15px;
+                        a {
+                            text-decoration: none;
+                            font-family: $fontFamily-1;
+                            font-style: normal;
+                            font-weight: $weight-3;
+                            font-size: $size-5;
+                            line-height: 150%; 
+                            color: $primary;
+                            transition: all .3s linear;
+
+                            &:hover {
+                                color: $secondary;
+                                transition: all .3s linear;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .header__contact {
+            a {
+                text-decoration: none;
+                font-family: $fontFamily-1;
+                font-style: normal;
+                font-weight: $weight-4;
+                font-size: $size-6;
+                line-height: 150%;
+                color: $white;
+                background: $red;
+                border: 1px solid $red;
+                border-radius: 10px;
+                padding: $padding-1 $padding-2;
+            }
+        }
+    }
+    
+    .mobile-mode {
+        @media (min-width: $tablet) {
+            display: none;
+        }
+    }
+}

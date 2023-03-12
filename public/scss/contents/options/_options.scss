@@ -1,0 +1,44 @@
+.options {
+    background-image: url('../../assets/images/options/banner-options-desktop.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .options__container {
+        width: $max-width-8;
+        margin: auto;
+
+        @media (max-width: $tablet){
+            width: $max-width-5;
+            margin: auto;
+        }
+    }
+
+    @media (max-width: $tablet) {
+        background-image: url('../../assets/images/options/banner-options-mobile.webp'); 
+        width: auto;
+        height: 509px;
+    }
+
+    @media (min-width: $tablet){
+        height: 452px;
+    }
+
+    .title {
+        font-family: $fontFamily-1;
+        font-style: italic;
+        font-weight: $weight-5;
+        font-size: 40px;
+        line-height: 110%;
+        color: $white;
+        text-align: center;
+        width: 440px;
+        margin: 0 auto;
+        @media (max-width: $tablet){
+            width: fit-content;
+        }
+    }
+}

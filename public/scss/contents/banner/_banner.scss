@@ -1,0 +1,137 @@
+.banner {
+    width: 100%;
+    height: 100%;
+    
+    @media (min-width: $tablet){
+        background-image: url('../images/banner/background-banner-stockash-desktop.webp');
+        background-position: center;
+        background-size: cover;
+    }
+
+    @media (max-width: $tablet){
+        background-image: url('../images/banner/background-banner-stockash-mobile.webp');
+        height: 593px;
+        overflow: hidden;
+        margin-bottom: -35px;
+    }
+    // background: radial-gradient(80.06% 80.06% at 72.06% 43.64%, #3884FC 0%, #1C2A49 100%);
+
+    .container {
+        margin: auto;
+        width: $max-width-3;
+        padding-top: $padding-2;
+        @media (max-width: $desktop-2){
+            width: $max-width-8;
+        }
+        @media (max-width: $tablet){
+            width: $max-width-5;
+        }
+
+        &.banner__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            @media (max-width: $tablet){
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .banner__image {
+            img {
+                @media (max-width: $tablet){
+                    width: 100%;
+                    margin-top: 4px;
+                }
+            }
+        }
+
+
+        .banner__contents {
+            @media (max-width: $tablet){
+                text-align: center;
+                z-index: 1;
+            }
+
+            .title {
+                font-family: $fontFamily-1;
+                font-style: normal;
+                font-weight: $weight-5;
+                font-size: $size-14;
+                line-height: 110%;
+                color: $white;
+                margin-bottom: 24px;
+                @media (max-width: $tablet) {
+                    font-size: 30px;
+                    margin-top: 32px;
+                }
+            }
+
+            .description {
+                font-family: $fontFamily-1;
+                font-style: normal;
+                font-weight: $weight-2;
+                font-size: $size-8;
+                line-height: 150%;
+                color: $white;
+                margin-bottom: 32px;
+                @media (max-width: $tablet) {
+                    font-size: $size-6;
+                    font-weight: $weight-1;
+                    margin-bottom: 24px;
+                }
+            }
+
+            .cta {
+                display: inline-block;
+                height: 60px;
+                text-decoration: none;
+                font-family: $fontFamily-1;
+                font-style: normal;
+                font-weight: $weight-4;
+                font-size: $size-7;
+                line-height: 60px;
+                color: $white;
+                background: $red;
+                border: 1px solid $red;
+                border-radius: 10px;
+                padding: 0 $padding-4;
+            }
+
+            .solution {
+                @media (max-width: $tablet) {
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .link {
+                    font-family: $fontFamily-1;
+                    font-style: normal;
+                    font-weight: $weight-3;
+                    font-size: $size-5;
+                    line-height: 150%;
+                    color: $white;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    &::after {
+                        margin-left: $margin-1;
+                        content: "";
+                        display: block;
+                        width: 20px;
+                        height: 21px;
+                        background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.833344 10.2916C0.833344 5.34391 4.844 1.33325 9.79168 1.33325C14.7394 1.33325 18.75 5.34391 18.75 10.2916C18.75 15.2393 14.7394 19.2499 9.79168 19.2499C4.844 19.2499 0.833344 15.2393 0.833344 10.2916ZM9.79168 2.58325C5.53436 2.58325 2.08334 6.03426 2.08334 10.2916C2.08334 14.5489 5.53436 17.9999 9.79168 17.9999C14.049 17.9999 17.5 14.5489 17.5 10.2916C17.5 6.03426 14.049 2.58325 9.79168 2.58325ZM9.79168 6.33325C10.1369 6.33325 10.4167 6.61307 10.4167 6.95825V9.66658H13.125C13.4702 9.66658 13.75 9.94641 13.75 10.2916C13.75 10.6368 13.4702 10.9166 13.125 10.9166H10.4167V13.6249C10.4167 13.9701 10.1369 14.2499 9.79168 14.2499C9.4465 14.2499 9.16668 13.9701 9.16668 13.6249V10.9166H6.45834C6.11317 10.9166 5.83334 10.6368 5.83334 10.2916C5.83334 9.94641 6.11317 9.66658 6.45834 9.66658H9.16668V6.95825C9.16668 6.61307 9.4465 6.33325 9.79168 6.33325Z' fill='%236AA4FF'/%3E%3C/svg%3E%0A");
+                    }
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+    }
+
+    // .banner__contents {
+
+    // }
+}

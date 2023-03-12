@@ -1,0 +1,30 @@
+<%- include('includes/header.ejs') %>
+<body>
+
+    <div class="container">
+        <div class="table-title">
+            <a class="link" href="/cadastro">Cadastrar usuário</a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% if(users.length > 0) { %>
+                    <% users.forEach(user => { %>
+                        <tr>
+                            <td><%- user.nome; %></td>
+                            <td><%- user.email; %></td>
+                            <td><%- user.telefone; %></td>
+                        </tr>
+                    <% }) %>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+<%- include('includes/footer.ejs') %>

@@ -1,0 +1,168 @@
+.employees {
+    background-color: $primary;
+    padding-bottom: 127px;
+    
+    .know-more { 
+        text-align: center;
+        margin-top: 64px;
+
+        .know-more__link {
+            display: inline-block;
+            height: 60px;
+            text-decoration: none;
+            font-family: $fontFamily-1;
+            font-style: normal;
+            font-weight: $weight-4;
+            font-size: $size-7;
+            line-height: 60px;
+            color: $white;
+            background: $red;
+            border: 1px solid $red;
+            border-radius: 10px;
+            padding: 0 $padding-4;
+        }
+    }
+    
+    // NOSSAS SOLUÇÕES
+    .solutions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+        width: $max-width-3;
+        align-items: flex-end;
+        column-gap: 32px;
+        margin-top: -300px;
+        @media (max-width: $desktop-3) {
+            width: $max-width-7;
+        }
+
+        @media (max-width: $desktop-2){
+            width: $max-width-8;
+        }
+
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr;
+            width: $max-width-7;
+        }
+
+
+        .title {
+            font-family: $fontFamily-1;
+            font-style: normal;
+            font-weight: $weight-5;
+            font-size: 40px;
+            line-height: 110%;
+            color: $white;
+            margin-top: 50px;
+            margin-bottom: 64px;
+
+            @media (max-width: $tablet) {
+                font-size: 37px;
+                margin-top: 10px;
+            }
+        }
+
+        .solutions-title {
+            color: $secondary;
+        }
+
+        .solutions-contents {
+            position: relative;
+            &::before {
+                position: absolute;
+                left: 24px;
+                top: 38px;
+                z-index: 0;
+                content: "";
+                display: block;
+                width: 1px;
+                height: 334px;
+                background-image: url("data:image/svg+xml,%3Csvg width='1' height='334' viewBox='0 0 1 334' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0.5' y1='2.10151e-08' x2='0.499986' y2='334' stroke='%233884FC' stroke-dasharray='2 2'/%3E%3C/svg%3E%0A");
+                @media (max-width: $desktop-1) {
+                    height: 425px;
+                }
+                @media (max-width: $tablet) {
+                    height: 300px;
+                }
+                @media (max-width: $mobile) {
+                    display: none;
+                }
+            }
+        }
+
+        .solutions__column-right {
+            position: relative;
+            @media (max-width: $tablet) {
+                display: flex;
+                flex-direction: column;
+            }
+
+            img {
+                @media (max-width: $tablet) {
+                    width: 100%;
+                    display: flex;
+                    order: 1;
+                    border-radius: 50px;
+                }
+            }
+
+            .tooltip {
+                top: -67px;
+                right: 54px;
+                position: absolute;
+                width: 376px;
+                height: 133px;
+                background: rgba(28, 42, 73);
+                border-radius: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 25px;
+                color: $white;
+                margin-top: 0;
+
+                p {
+                    backdrop-filter: unset!important;
+                }
+
+                @media (max-width: $tablet) {
+                    position: unset;
+                    width: fit-content;
+                    display: flex;
+                    order: -1;
+                    z-index: 1;
+                    width: 271px;
+                    margin: $margin-4 auto -41px;
+                }
+            }
+        }
+
+        .solutions-block {
+            display: flex;
+            column-gap: 16px;
+            margin-bottom: 15px;
+            div {
+                z-index: 1;
+            }
+            .solutions-small-content-1 {
+                font-family: $fontFamily-1;
+                font-style: normal;
+                font-size: $size-6;
+                font-weight: $weight-4;
+                color: $white;
+                margin-bottom: 5px;
+                margin-top: 0;
+            }
+
+            .solutions-small-content-2 {
+                font-family: $fontFamily-1;
+                font-style: normal;
+                font-weight: $weight-6;
+                font-size: $size-6;
+                line-height: 150%;
+                color: $white;
+                margin-top: 0;
+            }
+        }
+    }
+}

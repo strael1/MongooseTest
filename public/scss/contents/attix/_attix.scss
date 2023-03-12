@@ -1,0 +1,28 @@
+.attix {
+    background-color: $primary;
+    .attix__container {
+        margin: auto;
+        width: $max-width-3;
+        padding: 96px 0;
+        color: $white;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 32px;
+        align-items: center;
+
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr;
+            width: $max-width-7;
+            text-align: center;
+        }
+
+        .description {
+            font-size: $size-5;
+            line-height: 1.5;
+        }
+
+        img {
+            height: 100px;
+        }
+    }
+}
