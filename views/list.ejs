@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/usuarios">Cadastrar usuário</a>
+    </div>
+
+    <div class="container">
+        <ul>
+            <% users.forEach(function(user) { %>
+                <div class="box">
+                    <li>Nome: <%- user.nome %></li>
+                    <li>E-mail: <%- user.email %></li>
+                    <li>Telefone: s<%- user.telefone %></li>
+                    <li><a class="link" href="/contato/<%- user._id %>">Excluir</a></li>
+                </div>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>

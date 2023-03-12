@@ -1,0 +1,5 @@
+# Apenas para diretórios
+node_modules/
+
+# Apenas para arquivos
+.env
