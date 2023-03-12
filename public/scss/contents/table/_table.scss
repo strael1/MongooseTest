@@ -39,6 +39,15 @@
                 padding: $padding-2;
                 box-shadow: 1px 1px 1px rgba(0,0,0,.1);
                 text-align: center;
+
+                .link {
+                    padding: 5px 20px;
+                    background: #e74c3c;
+                    color: $white;
+                    font-size: 16px;
+                    border-radius: 2px;
+                    text-decoration: none;
+                }
             }
         }
     }

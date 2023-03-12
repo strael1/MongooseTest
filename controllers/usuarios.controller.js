@@ -32,4 +32,16 @@ exports.postUser = (req,res,next) => {
     })
 }
 
+exports.deleteOne = async (req,res,next) => {
+    const id = req.params.id;
+    if(id){
+        await Usuarios.deleteOne({_id: id})
+            .then(response => {
+                res.redirect('/')
+            })
+            .catch(err => {
+                console.error(err);
+            })
+    }
+}
 
