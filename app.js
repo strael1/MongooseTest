@@ -12,7 +12,8 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // CONNECTION
-mongoose.connect("mongodb+srv://rafaelsilva2:bmabjJFMFOuRgNcD@treinamento.usistsp.mongodb.net/?retryWrites=true&w=majority").then((response) => {
+mongoose.connect("mongodb+srv://rafaelsilva2:bmabjJFMFOuRgNcD@treinamento.usistsp.mongodb.net/?retryWrites=true&w=majority")
+.then((response) => {
     console.log('conectado!')
 });
 
